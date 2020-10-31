@@ -7,12 +7,13 @@ import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 
 import { Connection } from 'typeorm';
 import { BannerModule } from './feature/banner/banner.module';
+import { ThemeModule } from './feature/theme/theme.module';
 
 
 @Module({
   imports: [TypeOrmCoreModule.forRoot({
     namingStrategy: new SnakeNamingStrategy() // 小驼峰 -> 蛇形命名法
-  }), ConfigModule, BannerModule],
+  }), ConfigModule, BannerModule, ThemeModule],
   controllers: [AppController],
   providers: [AppService],
 })

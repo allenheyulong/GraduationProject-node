@@ -4,7 +4,8 @@
   "port": 3306,
   "username": "supengyu",
   "password": "supengyu",
-  "database": "bua_db",
+  "database": "sleeve",
   "entities": ["src/entity/*.ts"],
-  "synchronize": true
+  "logging": ["query", "error"],
+  "synchronize": false
 }

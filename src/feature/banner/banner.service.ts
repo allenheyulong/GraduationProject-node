@@ -1,19 +1,22 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Banner } from '../../entity/banner.entity';
 import { Repository } from 'typeorm';
-import { BannerItem } from '../../entity/bannerItem';
+import {Banner} from "../../entity/Banner";
 
 @Injectable()
 export class BannerService {
   constructor(
     @InjectRepository(Banner)
-    private readonly bannerRepository: Repository<Banner>
+    private readonly bannerRepository: Repository<Banner>,
   ) {}
   async findAll() {
+    debugger
     return this.bannerRepository.find();
   }
   async getByName(name: string) {
-    return this.bannerRepository.find({relations: ["items"]});
+    return this.bannerRepository.findOne({
+      relations: ['item_list'],
+      where: {name}
+    });
   }
 }
