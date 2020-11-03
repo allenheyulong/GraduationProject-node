@@ -1,9 +1,10 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { TransformInterceptor } from './core/interceptor/transform.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  //TODO: 提取公共配置文件中
+  app.useGlobalInterceptors(new TransformInterceptor());
   app.setGlobalPrefix('/v1');
   await app.listen(9223);
 }
