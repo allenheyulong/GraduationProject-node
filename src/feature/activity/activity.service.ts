@@ -15,4 +15,10 @@ export class ActivityService {
       where: { name },
     });
   }
+  async getByNameWithCoupon(name: string) {
+    return this.activityRepository.find({
+      relations: ['couponList'],
+      where: { name },
+    });
+  }
 }

@@ -12,6 +12,9 @@ import { LoggerMiddleware } from './core/middleware/logger.middleware';
 import { GridCategoryModule } from './feature/grid-category/grid-category.module';
 import { ActivityModule } from './feature/activity/activity.module';
 import { SpuModule } from './feature/spu/spu.module';
+import { CategoryModule } from './feature/category/category.module';
+import { CouponModule } from './feature/coupon/coupon.module';
+import { AuthModule } from './feature/auth/auth.module';
 
 @Module({
   imports: [
@@ -24,6 +27,9 @@ import { SpuModule } from './feature/spu/spu.module';
     GridCategoryModule,
     ActivityModule,
     SpuModule,
+    CategoryModule,
+    CouponModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

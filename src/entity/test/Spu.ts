@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("spu", { schema: "sleeve" })
+@Entity("spu", { schema: "bua" })
 export class Spu {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;
@@ -79,8 +79,8 @@ export class Spu {
   })
   isTest: number | null;
 
-  @Column("varchar", { name: "spu_theme_img", nullable: true, length: 30 })
-  spuThemeImg: string | null;
+  @Column("json", { name: "spu_theme_img", nullable: true })
+  spuThemeImg: object | null;
 
   @Column("varchar", { name: "for_theme_img", nullable: true, length: 255 })
   forThemeImg: string | null;

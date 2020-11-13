@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("grid_category", { schema: "sleeve" })
+@Entity("grid_category", { schema: "bua" })
 export class GridCategory {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("theme", { schema: "sleeve" })
+@Entity("theme", { schema: "bua" })
 export class Theme {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

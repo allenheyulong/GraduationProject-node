@@ -1,10 +1,10 @@
 {
   "type": "mysql",
-  "host": "localhost",
+  "host": "175.24.132.203",
   "port": 3306,
-  "username": "supengyu",
-  "password": "supengyu",
-  "database": "sleeve",
+  "username": "root",
+  "password": "Spy960820_",
+  "database": "bua",
   "entities": ["src/entity/*.ts"],
   "logging": ["query", "error"],
   "synchronize": false

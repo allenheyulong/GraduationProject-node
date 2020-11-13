@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("sku", { schema: "sleeve" })
+@Entity("sku", { schema: "bua" })
 export class Sku {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;
@@ -46,8 +46,8 @@ export class Sku {
   @Column("datetime", { name: "delete_time", nullable: true })
   deleteTime: Date | null;
 
-  @Column("varchar", { name: "specs", nullable: true, length: 255 })
-  specs: string | null;
+  @Column("json", { name: "specs", nullable: true })
+  specs: object | null;
 
   @Column("varchar", { name: "code", nullable: true, length: 255 })
   code: string | null;

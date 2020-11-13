@@ -31,7 +31,7 @@ export class ThemeController {
     const name = params.name;
     const themeWithSpu = await this.themeService.findByNameWithSpu(name);
     if (!themeWithSpu) {
-      return new _httpException({
+      throw new _httpException({
         message: '没有找到指定theme携带spu的数据',
       });
     }

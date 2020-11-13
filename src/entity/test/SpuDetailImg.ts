@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("spu_detail_img", { schema: "sleeve" })
+@Entity("spu_detail_img", { schema: "bua" })
 export class SpuDetailImg {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;
